@@ -1,6 +1,7 @@
 # Chickorato
 
 An implementation of a "board game" inspired by LEGO's Kokoriko.
+The game is implemented with [Phaser.js](https://github.com/photonstorm/phaser).
 
 ## About
 
