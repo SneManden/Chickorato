@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Working title: Kokoriko 2.0</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <script src="js/phaser.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/preload.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/score.js"></script>
+        <script src="js/participant.js"></script>
+        <script src="js/chicken.js"></script>
+        <script src="js/worm.js"></script>
+        <script src="js/egg.js"></script>
+        <!-- <script src="js/player.js"></script> -->
+        <script>
+        // (function() {
+            // GameBoy resolution is 160x144
+            var game = new Phaser.Game(160, 144, Phaser.AUTO, "",
+                null, false, false);
+            // Add game states
+            game.state.add("Init", KGame.Init);
+            game.state.add("Preload", KGame.Preload);
+            game.state.add("Menu", KGame.Menu);
+            game.state.add("Game", KGame.Game);
+            game.state.add("Score", KGame.Score);
+            // Start state
+            game.state.start("Init");
+            // pixel holds the scaled canvas
+            var pixel = {scale:4, canvas:null, context:null, width:0, height:0};
+            game.pixel = pixel;
+        // })();
+        </script>
+    </body>
+</html>
